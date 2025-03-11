@@ -20,7 +20,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <div className="flex flex-1 overflow-hidden">
         <Sidebar isOpen={sidebarOpen} />
         <main className={`flex-1 overflow-auto transition-all duration-300`}>
-          <div className="container mx-auto p-4 max-w-full">
+          <div className="container mx-auto p-2 sm:p-4 max-w-full backdrop-blur-sm bg-opticomm-darkest/30 min-h-full rounded-lg">
             {children}
           </div>
         </main>

@@ -53,11 +53,16 @@
 
   body {
     @apply bg-opticomm-darkest text-opticomm-text antialiased bg-grid-pattern bg-[size:24px_24px] relative overflow-x-hidden;
+    background-image: url('/lovable-uploads/b536cd0c-a71b-49e0-93f1-8de9f6804f3a.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   body::before {
     content: "";
-    @apply absolute pointer-events-none inset-0 bg-data-flow opacity-60 z-0;
+    @apply absolute pointer-events-none inset-0 bg-opticomm-darkest/40 z-0;
   }
 
   #root {
