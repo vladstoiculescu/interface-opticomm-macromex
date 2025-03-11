@@ -1,10 +1,13 @@
 
-import React, { useState } from 'react';
-import { Outlet } from 'react-router-dom';
+import React, { ReactNode, useState } from 'react';
 import Navbar from './Navbar';
 import Sidebar from './Sidebar';
 
-const Layout: React.FC = () => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(true);
   
   const toggleSidebar = () => {
@@ -18,7 +21,7 @@ const Layout: React.FC = () => {
         <Sidebar isOpen={sidebarOpen} />
         <main className={`flex-1 overflow-auto transition-all duration-300`}>
           <div className="container mx-auto p-4 max-w-full">
-            <Outlet />
+            {children}
           </div>
         </main>
       </div>
