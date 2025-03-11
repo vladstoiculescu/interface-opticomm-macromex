@@ -15,7 +15,7 @@ const data = [
 const TopRevenueDrivers: React.FC = () => {
   return (
     <DashboardCard title="TOP REVENUE DRIVERS">
-      <div className="space-y-4">
+      <div className="space-y-6">
         <div className="flex gap-2">
           <div className="chip-filter">
             <span>This Month</span>
@@ -27,7 +27,7 @@ const TopRevenueDrivers: React.FC = () => {
           </div>
         </div>
         
-        <div className="h-56">
+        <div className="h-64">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
               data={data}

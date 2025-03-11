@@ -33,13 +33,13 @@ const LiveOrderPrediction: React.FC = () => {
       <div className="space-y-4">
         <div className="grid grid-cols-3 gap-4">
           {predictionItems.map((item, index) => (
-            <div key={index} className="bg-opticomm-darker border border-opticomm-border rounded-md p-3 flex flex-col">
-              <div className="text-sm font-medium mb-2">{item.name}</div>
-              <div className="flex space-x-3 mb-3">
-                <div className="w-16 h-16 rounded overflow-hidden bg-opticomm-darker flex-shrink-0 flex items-center justify-center">
+            <div key={index} className="bg-opticomm-darker border border-opticomm-border rounded-md p-3">
+              <div className="text-sm font-medium mb-3">{item.name}</div>
+              <div className="flex flex-col items-center space-y-3 mb-3">
+                <div className="w-16 h-16 rounded overflow-hidden bg-opticomm-darker flex items-center justify-center">
                   {item.icon}
                 </div>
-                <div className="flex-1">
+                <div className="text-center">
                   <div className="text-sm truncate">{item.product}</div>
                   <div className="text-sm mt-1">
                     <span className="text-opticomm-muted">Predicted Quantity:</span> {item.quantity}
