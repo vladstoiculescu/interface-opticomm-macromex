@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,18 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				opticomm: {
+					dark: '#1A2533',
+					darker: '#152031',
+					darkest: '#0F1A29',
+					blue: '#24a0ed',
+					teal: '#64B6AC',
+					accent: '#2E7DAF',
+					text: '#E6EDF3',
+					muted: '#8596A6',
+					border: '#2A3A4D',
+					card: '#1E2C3A'
 				}
 			},
 			borderRadius: {
@@ -84,11 +97,36 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				pulse: {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' }
+				},
+				fadeIn: {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' }
+				},
+				slideIn: {
+					'0%': { transform: 'translateY(20px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
+				},
+				'bg-pulse': {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+				fadeIn: 'fadeIn 0.5s ease-out',
+				slideIn: 'slideIn 0.5s ease-out',
+				'bg-pulse': 'bg-pulse 15s ease infinite'
+			},
+			backgroundImage: {
+				'grid-pattern': 'linear-gradient(rgba(42, 58, 77, 0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(42, 58, 77, 0.4) 1px, transparent 1px)',
+				'glow-conic': 'conic-gradient(from 180deg at 50% 50%, rgba(56, 189, 248, 0.1) 0deg, rgba(0, 163, 255, 0.1) 55deg, rgba(31, 203, 255, 0.1) 120deg, rgba(0, 119, 182, 0.1) 160deg, transparent 360deg)',
+				'data-flow': 'radial-gradient(circle, rgba(36, 160, 237, 0.15) 0%, rgba(17, 24, 39, 0) 70%)'
 			}
 		}
 	},
