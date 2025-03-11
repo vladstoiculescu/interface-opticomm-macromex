@@ -21,9 +21,21 @@ const Dashboard = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-          <ModelPerformanceCard />
-          <PredictionConfidenceCard />
-          <DataHealthCard />
+          <ModelPerformanceCard 
+            version="1.02b" 
+            lastUpdate="19.02.2025" 
+            accuracyImprovement="+0.02%" 
+          />
+          <PredictionConfidenceCard 
+            percentage={94.4} 
+            categoryPercentage={95.3} 
+            customerPercentage={94.5} 
+          />
+          <DataHealthCard 
+            percentage={99.9} 
+            integrity={100} 
+            processingOn={true} 
+          />
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
