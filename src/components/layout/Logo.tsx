@@ -11,7 +11,7 @@ const Logo: React.FC<LogoProps> = ({ variant = 'default' }) => {
   return (
     <div className="flex items-center">
       <img 
-        src="/lovable-uploads/2ac3b912-2179-4e09-b3a0-28e96bb28550.png" 
+        src="/lovable-uploads/9eccdf44-79db-4d8e-8cb3-759d468220a5.png" 
         alt="OptiComm Logo" 
         className={`${size} w-auto`} 
       />

@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '@/components/layout/Logo';
-import MacromexLogo from '@/components/layout/MacromexLogo';
 import IntroCard from '@/components/welcome/IntroCard';
 import { TestInterfaceButton } from '@/components/ui/test-interface-button';
 import { LineChart, ClipboardList, BarChart3, Users } from 'lucide-react';
@@ -39,10 +37,9 @@ const Index = () => {
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-blue-500 rounded-full filter blur-[150px] opacity-10 translate-y-1/2 -translate-x-1/4"></div>
       </div>
       
-      {/* Header with Logos */}
-      <div className="w-full max-w-7xl mx-auto flex justify-between items-center mb-16 px-6 z-10">
+      {/* Header with Logo */}
+      <div className="w-full max-w-7xl mx-auto flex justify-center items-center mb-16 px-6 z-10">
         <Logo />
-        <MacromexLogo />
       </div>
       
       {/* Main Content Card */}
