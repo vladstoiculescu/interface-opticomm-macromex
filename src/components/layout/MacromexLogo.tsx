@@ -6,27 +6,15 @@ interface MacromexLogoProps {
 }
 
 const MacromexLogo: React.FC<MacromexLogoProps> = ({ variant = 'default' }) => {
-  if (variant === 'small') {
-    return (
-      <div className="flex items-center">
-        <div className="text-white font-bold text-xl flex items-center">
-          <span className="flex items-center justify-center w-8 h-8 relative overflow-hidden">
-            <div className="absolute w-6 h-6 rotate-45 bg-white top-1 left-1"></div>
-          </span>
-          <span className="ml-1">MACROMEX</span>
-        </div>
-      </div>
-    );
-  }
+  const size = variant === 'small' ? 'h-8' : 'h-10';
 
   return (
     <div className="flex items-center">
-      <div className="text-white font-bold text-2xl flex items-center">
-        <span className="flex items-center justify-center w-10 h-10 relative overflow-hidden">
-          <div className="absolute w-7 h-7 rotate-45 bg-white top-1.5 left-1.5"></div>
-        </span>
-        <span className="ml-2">MACROMEX</span>
-      </div>
+      <img 
+        src="/lovable-uploads/784f4993-0d5e-426f-af05-446b469bfcce.png" 
+        alt="Macromex Logo" 
+        className={`${size} w-auto`} 
+      />
     </div>
   );
 };
