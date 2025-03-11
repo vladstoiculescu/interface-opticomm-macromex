@@ -1,7 +1,7 @@
 
 import React from 'react';
 import DashboardCard from './DashboardCard';
-import { ChevronDown, BarChart3, Flag } from 'lucide-react';
+import { ChevronDown, BarChart3, Flag, Package, ShoppingCart, Sandwich } from 'lucide-react';
 
 const predictionItems = [
   {
@@ -9,21 +9,21 @@ const predictionItems = [
     product: 'Chifla Kaiser 35g',
     quantity: 140,
     date: '15.02.2025',
-    image: 'public/lovable-uploads/c92ca928-cba2-4d5f-9e4d-de3cfb6a1bb8.png'
+    icon: <Sandwich size={32} className="text-blue-400" />
   },
   {
     name: 'RO ALIMENTA SRL',
     product: 'Vinete Coapte Tocate',
     quantity: 110,
     date: '15.02.2025',
-    image: 'public/lovable-uploads/aad45cb6-5a08-404d-9d1f-0c67f1987ae4.png'
+    icon: <ShoppingCart size={32} className="text-green-400" />
   },
   {
     name: 'RO ALIMENTA SRL',
     product: 'Tofu Inedit 300g',
     quantity: 40,
     date: '16.02.2025',
-    image: 'public/lovable-uploads/49185eea-d7a8-4863-82c9-b066012387a6.png'
+    icon: <Package size={32} className="text-purple-400" />
   }
 ];
 
@@ -36,8 +36,8 @@ const LiveOrderPrediction: React.FC = () => {
             <div key={index} className="bg-opticomm-darker border border-opticomm-border rounded-md p-3 flex flex-col">
               <div className="text-sm font-medium mb-2">{item.name}</div>
               <div className="flex space-x-3 mb-3">
-                <div className="w-16 h-16 rounded overflow-hidden bg-opticomm-border flex-shrink-0">
-                  <img src={item.image} alt={item.product} className="w-full h-full object-cover" />
+                <div className="w-16 h-16 rounded overflow-hidden bg-opticomm-darker flex-shrink-0 flex items-center justify-center">
+                  {item.icon}
                 </div>
                 <div className="flex-1">
                   <div className="text-sm truncate">{item.product}</div>
