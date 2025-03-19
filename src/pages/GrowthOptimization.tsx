@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '@/components/layout/Layout';
 import DashboardCard from '@/components/dashboard/DashboardCard';
-import { TrendingUp, DollarSign, Target, Star, Mail, Search, Package, Send, BarChart3, ShoppingCart, PieChart, ChevronDown, X } from 'lucide-react';
+import { TrendingUp, DollarSign, Target, Star, Mail, Search, Package, Send, BarChart3, ShoppingCart, PieChart, ChevronDown, X, Wheat, Leaf, Salad } from 'lucide-react';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, PieChart as RePieChart, Pie, Cell, Tooltip } from 'recharts';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -15,21 +15,21 @@ const GrowthOptimization = () => {
     { 
       id: 1, 
       name: 'Chifla Kaiser', 
-      image: '/lovable-uploads/766f6b91-de33-4ac4-875f-44c1e473d6bb.png', 
+      icon: <Wheat className="w-8 h-8 text-amber-400" />, 
       probability: 95, 
       minQty: 30 
     },
     { 
       id: 2, 
       name: 'Orez cu Pui', 
-      image: '/lovable-uploads/766f6b91-de33-4ac4-875f-44c1e473d6bb.png', 
+      icon: <Wheat className="w-8 h-8 text-amber-200" />, 
       probability: 93, 
       minQty: 30 
     },
     { 
       id: 3, 
       name: 'Salata Vinete', 
-      image: '/lovable-uploads/766f6b91-de33-4ac4-875f-44c1e473d6bb.png', 
+      icon: <Salad className="w-8 h-8 text-purple-400" />, 
       probability: 92, 
       minQty: 30 
     },
@@ -128,7 +128,7 @@ const GrowthOptimization = () => {
                   {crossSellProducts.map((product) => (
                     <div key={product.id} className="bg-opticomm-darker border border-opticomm-border rounded-md p-3 flex items-center">
                       <div className="w-16 h-16 flex-shrink-0 rounded overflow-hidden mr-3 bg-opticomm-card flex items-center justify-center">
-                        <img src={product.image} alt={product.name} className="w-12 h-12 object-contain" />
+                        {product.icon}
                       </div>
                       <div className="flex-1">
                         <div className="font-medium">{product.name}</div>
