@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
 import Layout from '@/components/layout/Layout';
 import DashboardCard from '@/components/dashboard/DashboardCard';
-import { TrendingUp, DollarSign, Target, Star, Mail, Search, Package, Send, BarChart3, ShoppingCart, PieChart } from 'lucide-react';
+import { TrendingUp, DollarSign, Target, Star, Mail, Search, Package, Send, BarChart3, ShoppingCart, PieChart, ChevronDown, X } from 'lucide-react';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, CartesianGrid, PieChart as RePieChart, Pie, Cell, Tooltip } from 'recharts';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
