@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useLocation, Link } from 'react-router-dom';
-import { LineChart, ClipboardList, BarChart3, Users, User, Settings, HelpCircle } from 'lucide-react';
+import { LineChart, ClipboardList, BarChart3, Users, User, Settings, HelpCircle, LogOut } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -21,6 +21,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen }) => {
       { name: 'Profile', path: '/profile', icon: <User size={20} /> },
       { name: 'Settings', path: '/settings', icon: <Settings size={20} /> },
       { name: 'Helper', path: '/helper', icon: <HelpCircle size={20} /> },
+      { name: 'Logout', path: '/logout', icon: <LogOut size={20} /> },
     ]}
   ];
   
